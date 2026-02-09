@@ -20,11 +20,11 @@
         .header p { font-size: 1.125rem; color: var(--secondary); }
         .content { max-width: 700px; margin: 0 auto; padding: 8rem 2rem; }
         .doc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 4rem; }
-        .doc-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 3rem; transition: all 0.3s; }
+        .doc-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 3rem; transition: all 0.3s; display: flex; flex-direction: column; min-height: 280px; }
         .doc-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12); }
         .doc-card h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: -0.02em; }
-        .doc-card p { color: var(--secondary); font-size: 0.95rem; margin-bottom: 2rem; }
-        .download-btn { display: inline-block; padding: 0.875rem 2rem; background: var(--primary); color: white; text-decoration: none; border-radius: 8px; font-weight: 500; font-size: 0.875rem; transition: all 0.3s; }
+        .doc-card p { color: var(--secondary); font-size: 0.95rem; margin-bottom: auto; flex-grow: 1; }
+        .download-btn { display: inline-block; padding: 0.875rem 2rem; background: var(--primary); color: white; text-decoration: none; border-radius: 8px; font-weight: 500; font-size: 0.875rem; transition: all 0.3s; margin-top: 2rem; }
         .download-btn:hover { background: var(--accent); transform: translateY(-2px); }
         .links { text-align: center; color: var(--secondary); font-size: 0.95rem; }
         .links a { color: var(--accent); text-decoration: none; }
