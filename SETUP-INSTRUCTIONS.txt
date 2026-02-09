@@ -1,0 +1,78 @@
+========================================
+GITHUB PAGES SETUP - EXACT STEPS
+========================================
+
+YOU HAVE 10 FILES READY TO UPLOAD:
+✓ index.html
+✓ about.html
+✓ research.html
+✓ cv.html
+✓ headshot.jpg
+✓ pub1-mri-intensity.png
+✓ pub2-tumor-segmentation.png
+✓ pub3-mri-generation.png
+✓ pub4-crowdsourced.png
+✓ README.md
+
+========================================
+STEP 1: CREATE GITHUB ACCOUNT (if needed)
+========================================
+1. Go to https://github.com
+2. Click "Sign up"
+3. Username MUST be: kwahid
+4. Complete signup
+
+========================================
+STEP 2: CREATE REPOSITORY
+========================================
+1. Click the "+" button (top right corner)
+2. Click "New repository"
+3. Repository name: kwahid.github.io
+   (MUST be exactly: kwahid.github.io)
+4. Select "Public"
+5. DO NOT check any boxes
+6. Click "Create repository"
+
+========================================
+STEP 3: UPLOAD FILES
+========================================
+1. You'll see "Quick setup" page
+2. Click the link that says "uploading an existing file"
+3. DRAG AND DROP all 10 files into the upload area
+4. Scroll down
+5. Click green "Commit changes" button
+
+========================================
+STEP 4: ENABLE GITHUB PAGES
+========================================
+1. Click "Settings" tab (top of page)
+2. Click "Pages" in left sidebar
+3. Under "Branch":
+   - Change "None" to "main"
+   - Leave "/(root)" selected
+4. Click "Save"
+5. Wait 2 minutes
+
+========================================
+STEP 5: VIEW YOUR SITE!
+========================================
+Your website will be live at:
+https://kwahid.github.io
+
+Refresh after 2 minutes if it's not ready yet.
+
+========================================
+TROUBLESHOOTING
+========================================
+- Images not showing? Make sure ALL 10 files uploaded
+- Site not loading? Wait 5 minutes, GitHub Pages takes time
+- Wrong URL? Repository name MUST be kwahid.github.io
+
+========================================
+LATER: ADD CUSTOM DOMAIN (kareemwahid.com)
+========================================
+See README.md for custom domain setup instructions.
+
+========================================
+DONE! 🎉
+========================================

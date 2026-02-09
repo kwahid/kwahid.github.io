@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | Kareem A. Wahid</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #ffffff; --surface: #f5f5f5; --primary: #1a1a1a; --secondary: #4a4a4a; --accent: #0073e6; --border: #e0e0e0; --light-teal: #e8f5f5; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--primary); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(30px); border-bottom: 1px solid var(--border); z-index: 1000; }
+        nav .container { max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        nav .logo { font-weight: 600; font-size: 0.9rem; color: var(--primary); text-decoration: none; letter-spacing: 0.02em; }
+        nav ul { display: flex; gap: 2.5rem; list-style: none; }
+        nav a { color: var(--secondary); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--primary); }
+        .header { margin-top: 80px; padding: 8rem 0 6rem; background: var(--light-teal); text-align: center; }
+        .header h1 { font-size: 4rem; font-weight: 700; letter-spacing: -0.05em; margin-bottom: 1.5rem; }
+        .header p { font-size: 1.125rem; color: var(--secondary); }
+        .content { max-width: 700px; margin: 0 auto; padding: 8rem 2rem; }
+        .doc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 4rem; }
+        .doc-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 3rem; transition: all 0.3s; }
+        .doc-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12); }
+        .doc-card h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: -0.02em; }
+        .doc-card p { color: var(--secondary); font-size: 0.95rem; margin-bottom: 2rem; }
+        .download-btn { display: inline-block; padding: 0.875rem 2rem; background: var(--primary); color: white; text-decoration: none; border-radius: 8px; font-weight: 500; font-size: 0.875rem; transition: all 0.3s; }
+        .download-btn:hover { background: var(--accent); transform: translateY(-2px); }
+        .links { text-align: center; color: var(--secondary); font-size: 0.95rem; }
+        .links a { color: var(--accent); text-decoration: none; }
+        .links a:hover { text-decoration: underline; }
+        footer { background: var(--primary); color: rgba(255, 255, 255, 0.5); padding: 4rem 0; text-align: center; font-size: 0.875rem; margin-top: 6rem; }
+        @media (max-width: 768px) {
+            nav .container { padding: 1.5rem 1.5rem; }
+            .content { padding: 6rem 1.5rem; }
+            .header h1 { font-size: 3rem; }
+            .header { padding: 6rem 0 4rem; }
+            .doc-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">KAREEM WAHID</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#bio">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>Curriculum Vitae</h1>
+        <p>Academic documents and credentials</p>
+    </div>
+
+    <div class="content">
+        <div class="doc-grid">
+            <div class="doc-card">
+                <h3>CV</h3>
+                <p>Complete academic and professional curriculum vitae</p>
+                <a href="CV_Wahid.pdf" class="download-btn">Download</a>
+            </div>
+
+            <div class="doc-card">
+                <h3>Biosketch</h3>
+                <p>NIH biographical sketch format</p>
+                <a href="biosketch_Wahid.pdf" class="download-btn">Download</a>
+            </div>
+        </div>
+
+        <div class="links">
+            <p>View complete publication list on <a href="https://scholar.google.com/citations?hl=en&user=whrnQUUAAAAJ" target="_blank">Google Scholar</a> or <a href="https://orcid.org/0000-0002-0503-0175" target="_blank">ORCID</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Kareem A. Wahid</p>
+    </footer>
+</body>
+</html>

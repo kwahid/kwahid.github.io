@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Kareem A. Wahid</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #ffffff; --surface: #f5f5f5; --primary: #1a1a1a; --secondary: #4a4a4a; --accent: #0073e6; --border: #e0e0e0; --light-teal: #e8f5f5; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--primary); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(30px); border-bottom: 1px solid var(--border); z-index: 1000; }
+        nav .container { max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        nav .logo { font-weight: 600; font-size: 0.9rem; color: var(--primary); text-decoration: none; letter-spacing: 0.02em; }
+        nav ul { display: flex; gap: 2.5rem; list-style: none; }
+        nav a { color: var(--secondary); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--primary); }
+        .header { margin-top: 80px; padding: 8rem 0 6rem; background: var(--light-teal); }
+        .header .container { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
+        .header h1 { font-size: 4rem; font-weight: 700; letter-spacing: -0.05em; margin-bottom: 1.5rem; }
+        .content { max-width: 900px; margin: 0 auto; padding: 8rem 2rem; background: var(--bg); }
+        .intro { font-size: 1rem; line-height: 1.8; color: var(--secondary); margin-bottom: 4rem; }
+        .intro p { margin-bottom: 2rem; }
+        .section-title { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.04em; margin: 6rem 0 1.5rem; }
+        .subtitle { font-size: 0.95rem; color: var(--secondary); margin-bottom: 5rem; }
+        .publication { margin-bottom: 8rem; padding: 3rem; background: var(--surface); border-radius: 12px; }
+        .publication:nth-child(even) { background: var(--bg); }
+        .publication img { width: 100%; border-radius: 12px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12); margin-bottom: 2.5rem; }
+        .publication h3 { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+        .publication .meta { color: var(--secondary); font-size: 0.9rem; }
+        footer { background: var(--primary); color: rgba(255, 255, 255, 0.5); padding: 4rem 0; text-align: center; font-size: 0.875rem; margin-top: 6rem; }
+        @media (max-width: 1024px) {
+            nav .container { padding: 1.5rem 1.5rem; }
+            .content { padding: 6rem 1.5rem; }
+            .header h1 { font-size: 3rem; }
+            .header { padding: 6rem 0 4rem; }
+        }
+        @media (max-width: 640px) {
+            nav ul { gap: 1.5rem; }
+            nav a { font-size: 0.8rem; }
+            .header h1 { font-size: 2.5rem; }
+            .section-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">KAREEM WAHID</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#bio">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <div class="container">
+            <h1>My Research</h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="intro">
+            <p>Over my time as a trainee, I have focused on developing a robust skill set to bridge artificial intelligence (AI) and medical imaging. My graduate studies focused on AI in the radiation oncology domain, where I developed predictive analytic tools for head and neck cancer diagnosis and treatment under the guidance of <a href="https://www.mdanderson.org/research/departments-labs-institutes/labs/fuller-laboratory.html" target="_blank">Dr. Clifton Fuller</a>. Serially funded through an <a href="https://gsbs.uth.edu/ccts-tl1/" target="_blank">NCATS TL1 Fellowship (TL1TR003169)</a> and subsequently through an <a href="https://reporter.nih.gov/search/Iv6gViXF-UuEzBxpvxa-LA/project-details/10489312" target="_blank">NIH F31 Fellowship (F31DE031502-01)</a>, I have contributed to a variety of projects related to imaging in head and neck cancer radiotherapy. Broadly, I performed research on image processing, automated region-of-interest segmentation, and clinical outcome prediction. A few key projects I'm particularly proud of are highlighted below, but you can find a full up to date list of my publications on <a href="https://scholar.google.com/citations?user=whrnQUUAAAAJ&hl=en" target="_blank">Google Scholar</a>. You can also check out my full PhD dissertation (and defense recording) on <a href="https://figshare.com/articles/thesis/Kareem_Wahid_PhD_Dissertation_Multiparametric_Magnetic_Resonance_Imaging_Artificial_Intelligence_Pipeline_for_Oropharyngeal_Cancer_Radiotherapy_Treatment_Guidance/22141871" target="_blank">Figshare</a>.</p>
+
+            <p>I plan to pursue a career as a clinician-scientist with a research emphasis on applying AI to personalized/precision oncology. In the near term, I aim to pursue a residency position in radiation oncology with the goal of performing clinical trials based on AI-centric clinical decision support tools as a path towards mentored and eventual independent investigator status. While my PhD training has granted me technical informatics domain knowledge and mentorship, I believe a crucial yet often under-valued aspect of clinical translation of these technologies is the underlying ethical considerations for physician and patient end-users. Therefore, I pursued a post-doctoral opportunity through the NIH <a href="https://www.mdanderson.org/education-training/clinical-research-training/postdoctoral-training/postdoctoral-fellowships/igct-t32-training-program.html" target="_blank">Image Guided Cancer Therapy T32 program</a> to explore these topics with sufficient rigor so that I may successfully lead the ethical and equitable translation of image-guided AI technologies to the clinic.</p>
+        </div>
+
+        <h2 class="section-title">Key Publications</h2>
+        <p class="subtitle">The following are brief highlights of some of research papers that I'm particularly proud of. Please feel free to check out the linked publications for more info. I make a conscious effort to publicly release my work (open-access).</p>
+
+        <div class="publication">
+            <img src="pub1-mri-intensity.png" alt="MRI Intensity Standardization">
+            <h3>MRI Intensity Standardization</h3>
+            <p class="meta">Published in: <a href="https://www.sciencedirect.com/science/article/pii/S2405631621000658" target="_blank">Physics and Imaging in Radiation Oncology</a>.</p>
+        </div>
+
+        <div class="publication">
+            <img src="pub2-tumor-segmentation.png" alt="Multiparametric MRI Automated Tumor Segmentation">
+            <h3>Multiparametric MRI Automated Tumor Segmentation</h3>
+            <p class="meta">Published in: <a href="https://www.sciencedirect.com/science/article/pii/S2405630821000884" target="_blank">Clinical and Translational Radiation Oncology</a>.</p>
+        </div>
+
+        <div class="publication">
+            <img src="pub3-mri-generation.png" alt="Low-Quality to High-Quality MRI Generation">
+            <h3>Low-Quality to High-Quality MRI Generation</h3>
+            <p class="meta">Published in: <a href="https://www.frontiersin.org/articles/10.3389/fonc.2022.975902/full" target="_blank">Frontiers in Oncology</a>.</p>
+        </div>
+
+        <div class="publication">
+            <img src="pub4-crowdsourced.png" alt="Crowdsourced Segmentation">
+            <h3>Crowdsourced Segmentation</h3>
+            <p class="meta">Published in: <a href="https://www.spiedigitallibrary.org/journals/journal-of-medical-imaging/volume-10/issue-S1/S11903/E-pluribus-unum--prospective-acceptability-benchmarking-from-the-Contouring/10.1117/1.JMI.10.S1.S11903.full?SSO=1" target="_blank">Journal of Medical Imaging</a>.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>©2026 by Kareem Wahid</p>
+    </footer>
+</body>
+</html>
