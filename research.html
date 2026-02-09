@@ -13,7 +13,7 @@
         a:hover { text-decoration: underline; }
         nav { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(30px); border-bottom: 1px solid var(--border); z-index: 1000; }
         nav .container { max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-        nav .logo { font-weight: 600; font-size: 0.9rem; color: var(--primary); text-decoration: none; letter-spacing: 0.02em; }
+        nav .logo { font-weight: 600; font-size: 0.9rem; color: var(--primary); text-decoration: none; }
         nav ul { display: flex; gap: 2.5rem; list-style: none; }
         nav a { color: var(--secondary); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.3s; }
         nav a:hover { color: var(--primary); }
@@ -33,16 +33,14 @@
         .social-links a:hover { background: var(--primary); color: white; transform: translateY(-2px); border-color: var(--primary); }
         .social-links svg { width: 20px; height: 20px; fill: currentColor; }
         footer { background: var(--primary); color: rgba(255, 255, 255, 0.5); padding: 4rem 0; text-align: center; font-size: 0.875rem; margin-top: 6rem; }
-        @media (max-width: 1024px) {
-            nav .container { padding: 1.5rem 1.5rem; }
+        @media (max-width: 768px) {
+            nav .container { padding: 1rem 1rem; }
+            nav .logo { font-size: 0.75rem; }
+            nav ul { gap: 0.8rem; }
+            nav a { font-size: 0.7rem; }
             .content { padding: 6rem 1.5rem; }
             .header h1 { font-size: 3rem; }
             .header { padding: 6rem 0 4rem; }
-        }
-        @media (max-width: 640px) {
-            nav ul { gap: 1.5rem; }
-            nav a { font-size: 0.8rem; }
-            .header h1 { font-size: 2.5rem; }
             .section-title { font-size: 2rem; }
         }
     </style>
@@ -52,11 +50,11 @@
         <div class="container">
             <a href="index.html" class="logo">KAREEM WAHID</a>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#bio">About</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="about.html">👤 About</a></li>
+                <li><a href="research.html">🔬 Research</a></li>
+                <li><a href="cv.html">📄 CV</a></li>
+                <li><a href="contact.html">✉️ Contact</a></li>
             </ul>
         </div>
     </nav>
