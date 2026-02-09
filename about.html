@@ -19,7 +19,7 @@
         nav a:hover { color: var(--primary); }
         .page-header { margin-top: 80px; padding: 4rem 0 2rem; background: var(--light-teal); text-align: center; }
         .page-header h1 { font-size: 4rem; font-weight: 700; letter-spacing: -0.05em; }
-        .hero-section { background: var(--light-teal); padding-top: 0; padding-bottom: 2rem; }
+        .hero-section { background: var(--bg); padding-top: 2rem; padding-bottom: 2rem; }
         .hero-image { max-width: 350px; margin: 2rem auto 2rem; }
         .hero-image img { width: 100%; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
         .content { max-width: 800px; margin: 0 auto; padding: 4rem 2rem; background: var(--bg); }
@@ -29,7 +29,7 @@
         .info-section p { font-size: 1rem; color: var(--primary); margin-bottom: 0.25rem; }
         .content h2 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.03em; margin: 4rem 0 2rem; }
         .content p { font-size: 1.05rem; line-height: 1.8; color: var(--secondary); margin-bottom: 2rem; }
-        .timeline { margin-top: 4rem; padding: 4rem 0 4rem 2rem; background: var(--surface); margin-left: -2rem; margin-right: -2rem; padding-left: 4rem; padding-right: 2rem; position: relative; }
+        .timeline { margin-top: 4rem; padding: 4rem 0 4rem 2rem; background: var(--bg); margin-left: -2rem; margin-right: -2rem; padding-left: 4rem; padding-right: 2rem; position: relative; }
         .timeline::before { content: ''; position: absolute; left: 234px; top: 2rem; bottom: 2rem; width: 3px; background: var(--border); z-index: 0; }
         .timeline-item { display: grid; grid-template-columns: 180px 1fr; gap: 3rem; margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: none; position: relative; z-index: 1; align-items: start; }
         .timeline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
@@ -70,12 +70,7 @@
 
     <div class="page-header">
         <h1>About</h1>
-    </div>
-
-    <div class="hero-section">
-        <div class="hero-image">
-            <img src="headshot.jpg" alt="Kareem A. Wahid">
-        </div>
+        <p>Physician-scientist trainee in medical imaging and AI</p>
     </div>
 
     <div class="content">
@@ -83,8 +78,8 @@
         
         <div class="info-section">
             <h3>Current Position</h3>
-            <p>4th year medical student, McGovern Medical School</p>
-            <p>Post-doctoral fellow, MD Anderson Cancer Center</p>
+            <p><strong>4th year medical student</strong>, <em>McGovern Medical School</em></p>
+            <p><strong>Post-doctoral fellow</strong>, <em>MD Anderson Cancer Center</em></p>
         </div>
 
         <div class="info-section">
@@ -95,42 +90,42 @@
         </div>
 
         <h2>A Bit About Me</h2>
-        <p>I was born and raised in the Rio Grande Valley, Texas. My dad and mom immigrated to the US from their home countries of Bangladesh and Peru respectively to pursue careers as physicians. Witnessing my parents' passion for medicine and deep dedication to serving their new community caused me to develop my own passion for medicine and a sense of duty to give back. As a mixed-race Hispanic-American raised on the US/Mexico border, I developed an early understanding of the importance of viewing problems from different perspectives. My undergraduate education in physics and mathematics at the <a href="https://www.utrgv.edu/physics/" target="_blank">University of Texas Rio Grande Valley</a> provided me with an interdisciplinary foundation to support my eventual pursuit of a career as a physician-scientist. During my undergraduate career, I contributed to research in various fields including nanoscience, radiation-physics, and physical-chemistry. I subsequently pursued a medical degree at <a href="https://med.uth.edu/" target="_blank">McGovern Medical School</a>, during which I grew a keen interest in the field of artificial intelligence. Through <a href="https://gsbs.uth.edu/mdphd/" target="_blank">The University of Texas Medical Scientist Training Program at Houston</a>, I then pursued a PhD in <a href="https://gsbs.uth.edu/quantitative-sciences/" target="_blank">Quantitative Sciences</a> where I applied artificial intelligence in medical imaging to improve diagnostic, prognostic, and therapeutic capabilities in oncology. I subsequently completed a post-doctoral fellowship at <a href="https://www.mdanderson.org/" target="_blank">MD Anderson Cancer Center</a> on the role of human-machine interaction in AI-based radiotherapy decision making. I am currently a 4th year medical student and am applying for radiation oncology residency. I am fortunate to currently serve as an <a href="https://www.phiro.science/content/edboard" target="_blank">Associate Editor for Physics and Imaging in Radiation Oncology</a>.</p>
+        <p>I was born and raised in the Rio Grande Valley, Texas. My dad and mom immigrated to the US from their home countries of Bangladesh and Peru respectively to pursue careers as physicians. Witnessing my parents' passion for medicine and deep dedication to serving their new community caused me to develop my own passion for medicine and a sense of duty to give back. As a <strong>mixed-race Hispanic-American</strong> raised on the US/Mexico border, I developed an early understanding of the importance of viewing problems from different perspectives. My undergraduate education in physics and mathematics at the <a href="https://www.utrgv.edu/physics/" target="_blank">University of Texas Rio Grande Valley</a> provided me with an interdisciplinary foundation to support my eventual pursuit of a career as a physician-scientist. During my undergraduate career, I contributed to research in various fields including nanoscience, radiation-physics, and physical-chemistry. I subsequently pursued a medical degree at <a href="https://med.uth.edu/" target="_blank">McGovern Medical School</a>, during which I grew a keen interest in the field of <strong>artificial intelligence</strong>. Through <a href="https://gsbs.uth.edu/mdphd/" target="_blank">The University of Texas Medical Scientist Training Program at Houston</a>, I then pursued a PhD in <a href="https://gsbs.uth.edu/quantitative-sciences/" target="_blank">Quantitative Sciences</a> where I applied artificial intelligence in medical imaging to improve diagnostic, prognostic, and therapeutic capabilities in oncology. I subsequently completed a post-doctoral fellowship at <a href="https://www.mdanderson.org/" target="_blank">MD Anderson Cancer Center</a> on the role of <strong>human-machine interaction</strong> in AI-based radiotherapy decision making. I am currently a 4th year medical student and am applying for <strong>radiation oncology residency</strong>. I am fortunate to currently serve as an <a href="https://www.phiro.science/content/edboard" target="_blank">Associate Editor for Physics and Imaging in Radiation Oncology</a>.</p>
 
         <h2>Career Timeline</h2>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-year">May 2025 - May 2026</div>
                 <div class="timeline-content">
-                    <p>Currently completing final year of medical school at McGovern Medical School. Plan to pursue a radiation oncology residency.</p>
+                    <p>Currently completing final year of medical school at <em>McGovern Medical School</em>. Plan to pursue a <strong>radiation oncology residency</strong>.</p>
                 </div>
             </div>
 
             <div class="timeline-item">
                 <div class="timeline-year">May 2023 - May 2025</div>
                 <div class="timeline-content">
-                    <p>Completed an <a href="https://www.mdanderson.org/education-training/clinical-research-training/postdoctoral-training/postdoctoral-fellowships/igct-t32-training-program.html" target="_blank">NIH-funded T32 post-doctoral fellowship</a>. Projects broadly involved the topics of human-machine interaction and ethics.</p>
+                    <p>Completed an <a href="https://www.mdanderson.org/education-training/clinical-research-training/postdoctoral-training/postdoctoral-fellowships/igct-t32-training-program.html" target="_blank">NIH-funded T32 post-doctoral fellowship</a>. Projects broadly involved the topics of <strong>human-machine interaction</strong> and <strong>ethics</strong>.</p>
                 </div>
             </div>
 
             <div class="timeline-item">
                 <div class="timeline-year">May 2019 - May 2023</div>
                 <div class="timeline-content">
-                    <p>Completed PhD in <a href="https://gsbs.uth.edu/quantitative-sciences/" target="_blank">Quantitative Sciences</a> at <a href="https://gsbs.uth.edu/" target="_blank">The University of Texas MD Anderson Cancer Center UTHealth Houston Graduate School of Biomedical Sciences</a>. PhD focused on <a href="research.html">image processing, segmentation, and outcome prediction</a> for head and neck cancer radiotherapy.</p>
+                    <p>Completed <strong>PhD</strong> in <a href="https://gsbs.uth.edu/quantitative-sciences/" target="_blank">Quantitative Sciences</a> at <a href="https://gsbs.uth.edu/" target="_blank">The University of Texas MD Anderson Cancer Center UTHealth Houston Graduate School of Biomedical Sciences</a>. PhD focused on <a href="research.html">image processing, segmentation, and outcome prediction</a> for head and neck cancer radiotherapy.</p>
                 </div>
             </div>
 
             <div class="timeline-item">
                 <div class="timeline-year">June 2016 - May 2019</div>
                 <div class="timeline-content">
-                    <p>Completed first three years of medical school at <a href="https://med.uth.edu/" target="_blank">McGovern Medical School</a> as part of the <a href="https://gsbs.uth.edu/mdphd/" target="_blank">UTHealth MSTP program</a>. Passed USMLE Step 1 and Step 2. Performed research in neuro-imaging.</p>
+                    <p>Completed first three years of medical school at <a href="https://med.uth.edu/" target="_blank">McGovern Medical School</a> as part of the <a href="https://gsbs.uth.edu/mdphd/" target="_blank">UTHealth MSTP program</a>. Passed <strong>USMLE Step 1</strong> and <strong>Step 2</strong>. Performed research in neuro-imaging.</p>
                 </div>
             </div>
 
             <div class="timeline-item">
                 <div class="timeline-year">July 2012 - May 2016</div>
                 <div class="timeline-content">
-                    <p>Completed BS in Physics and Mathematics (double major) at the <a href="https://www.utrgv.edu/physics/" target="_blank">University of Texas Rio Grande Valley</a> (formerly Pan American). Performed research in nuclear physics, materials science, and computational biology.</p>
+                    <p>Completed <strong>BS in Physics and Mathematics</strong> (double major) at the <a href="https://www.utrgv.edu/physics/" target="_blank">University of Texas Rio Grande Valley</a> (formerly Pan American). Performed research in nuclear physics, materials science, and computational biology.</p>
                 </div>
             </div>
 
