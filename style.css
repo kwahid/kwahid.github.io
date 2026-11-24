@@ -1,0 +1,269 @@
+/* ==========================================================================
+   kareemwahid.com - shared styles for every page.
+   Edit colours and fonts once here instead of in each HTML file.
+   ========================================================================== */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --bg: #ffffff;
+    --surface: #f5f5f5;
+    --primary: #1a1a1a;
+    --secondary: #4a4a4a;
+    --accent: #0073e6;
+    --border: #e0e0e0;
+    --light-teal: #e8f5f5;
+}
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+img { max-width: 100%; }
+
+/* Anything a link can jump to should clear the sticky menu. */
+[id] { scroll-margin-top: 6.5rem; }
+
+.skip-link {
+    position: absolute; left: 1rem; top: -5rem; z-index: 2000;
+    padding: 0.75rem 1rem; border-radius: 8px;
+    background: var(--primary); color: #fff; font-size: 0.875rem; font-weight: 500;
+}
+.skip-link:focus { top: 1rem; text-decoration: none; }
+
+/* ---------- Menu ---------------------------------------------------------- */
+
+.site-nav {
+    position: sticky; top: 0; width: 100%; z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(30px); backdrop-filter: blur(30px);
+    border-bottom: 1px solid var(--border);
+}
+.site-nav .container {
+    max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem;
+    display: flex; justify-content: space-between; align-items: center; gap: 1.5rem;
+}
+.site-nav .logo { font-weight: 600; font-size: 0.9rem; color: var(--primary); text-decoration: none; white-space: nowrap; }
+.site-nav ul { display: flex; gap: 2.5rem; list-style: none; }
+.site-nav ul a {
+    display: inline-flex; align-items: center; gap: 0.45em; white-space: nowrap;
+    color: var(--secondary); text-decoration: none; font-size: 0.875rem; font-weight: 500;
+    transition: color 0.3s;
+}
+.site-nav ul a:hover,
+.site-nav ul a[aria-current="page"] { color: var(--primary); }
+.site-nav ul a[aria-current="page"] { font-weight: 600; }
+
+/* ---------- Page tops ----------------------------------------------------- */
+
+/* Home */
+.hero { padding: 4rem 2rem; text-align: center; background: var(--light-teal); }
+.hero h1 { font-size: 3.5rem; font-weight: 700; letter-spacing: -0.04em; line-height: 1.2; margin-bottom: 1.5rem; text-wrap: balance; }
+.hero p { font-size: 1.1rem; color: var(--secondary); max-width: 700px; margin: 0 auto 2rem; line-height: 1.8; }
+.hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+.hero .hero-actions { justify-content: center; }
+
+/* About, Research, CV, Contact */
+.header { padding: 8rem 1.5rem 6rem; background: var(--light-teal); text-align: center; }
+.header h1 { font-size: 4rem; font-weight: 700; letter-spacing: -0.05em; line-height: 1.3; margin-bottom: 0.35rem; }
+.header p { font-size: 1.125rem; color: var(--secondary); }
+
+/* ---------- Buttons ------------------------------------------------------- */
+
+.btn, .download-btn {
+    display: inline-block; padding: 0.875rem 2rem; border-radius: 8px;
+    background: var(--primary); color: #fff; border: 1px solid var(--primary);
+    font-weight: 500; font-size: 0.875rem; text-decoration: none; transition: all 0.3s;
+}
+.btn:hover, .download-btn:hover { background: var(--accent); border-color: var(--accent); transform: translateY(-2px); text-decoration: none; }
+.btn-outline { background: transparent; color: var(--primary); }
+.btn-outline:hover { color: #fff; }
+.download-btn { margin-top: 2rem; }
+
+/* ---------- Main column --------------------------------------------------- */
+
+.content { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; background: var(--bg); }
+.page-home .content { padding: 3rem 2rem 1rem; }
+.page-research .content, .page-cv .content, .page-contact .content, .page-404 .content { padding: 5rem 2rem 2rem; }
+
+.content h2 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.2; margin: 4rem 0 2rem; }
+.content > h2:first-child { margin-top: 0; }
+.page-home .content p, .page-about .content p, .page-404 .content p { font-size: 1.05rem; line-height: 1.8; color: var(--secondary); margin-bottom: 1.5rem; }
+
+.more-link { font-weight: 500; }
+
+/* Photos */
+.hero-image { max-width: 400px; margin: 2rem auto; }
+.portrait { max-width: 350px; margin: 0 0 3rem; }
+.hero-image img, .portrait img { display: block; width: 100%; height: auto; border-radius: 16px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12); }
+
+/* ---------- About --------------------------------------------------------- */
+
+.content .name-heading { font-size: 3rem; letter-spacing: -0.04em; margin: 0 0 3rem; }
+.info-section { margin-bottom: 3rem; }
+.info-section h3 { font-size: 1.5rem; font-weight: 600; color: var(--secondary); margin-bottom: 0.5rem; }
+.page-about .info-section p { font-size: 1rem; line-height: 1.6; color: var(--primary); margin-bottom: 0.25rem; }
+
+.timeline { position: relative; margin: 4rem -2rem 0; padding: 4rem 2rem 4rem 4rem; }
+.timeline::before {
+    content: ''; position: absolute; z-index: 0; top: 2rem; bottom: 2rem; width: 3px; background: var(--border);
+    left: calc(4rem + 180px + 1.5rem - 1.5px);   /* centred in the gap between dates and text */
+}
+.timeline-item { display: grid; grid-template-columns: 180px 1fr; gap: 3rem; align-items: start; position: relative; z-index: 1; margin-bottom: 6rem; }
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-year { position: relative; padding-right: 1rem; text-align: right; color: var(--primary); font-weight: 600; font-size: 0.9rem; line-height: 1.4; }
+.timeline-year::after {
+    content: ''; position: absolute; z-index: 2; top: 50%; transform: translateY(-50%);
+    right: calc(-1.5rem - 12px); width: 16px; height: 16px;   /* 24px wide with its border, centred on the line */
+    background: var(--primary); border-radius: 50%; border: 4px solid var(--surface);
+}
+.page-about .timeline-content p { font-size: 1rem; margin: 0; }
+
+/* ---------- Research ------------------------------------------------------ */
+
+.jump-links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 3rem; }
+.jump-links a {
+    padding: 0.45rem 1rem; border: 1px solid var(--border); border-radius: 999px; background: var(--surface);
+    color: var(--primary); font-size: 0.85rem; font-weight: 500; text-decoration: none; transition: all 0.3s;
+}
+.jump-links a:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+.intro { font-size: 1rem; line-height: 1.8; color: var(--secondary); margin-bottom: 4rem; }
+.intro p { margin-bottom: 1.5rem; }
+
+.content .section-title { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.04em; line-height: 1.2; margin: 6rem 0 1.5rem; }
+.content .subhead { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.3; margin: 3.5rem 0 1rem; }
+.subtitle + .subhead { margin-top: 0; }
+.subtitle { font-size: 0.95rem; line-height: 1.7; color: var(--secondary); margin-bottom: 2.5rem; }
+
+/* Lists: publications, talks, media */
+.entry-list { list-style: none; border-top: 1px solid var(--border); }
+.entry { padding: 1.6rem 0; border-bottom: 1px solid var(--border); }
+.entry-tag { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--secondary); margin-bottom: 0.4rem; }
+.entry-title { font-size: 1.15rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.4; margin-bottom: 0.4rem; }
+.entry-title a { color: var(--primary); text-decoration: underline; text-decoration-color: #c4c4c4; text-decoration-thickness: 1px; text-underline-offset: 4px; transition: color 0.3s, text-decoration-color 0.3s; }
+.entry-title a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+.entry-meta { font-size: 0.9rem; line-height: 1.6; color: var(--secondary); }
+.entry-note { white-space: nowrap; }
+.page-home .content .entry-meta { font-size: 0.9rem; line-height: 1.6; margin-bottom: 0; }
+.page-home .content .entry-tag { font-size: 0.75rem; line-height: 1.6; margin-bottom: 0.4rem; }
+.page-home .content .more-link { margin: 1.75rem 0 0; }
+
+/* Publications: every entry has the same small figure box beside it; click to open the figure full size */
+.entry--figure { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 1.75rem; align-items: start; }
+.entry-figure { display: block; border: 1px solid var(--border); border-radius: 10px; background: #fff; overflow: hidden; cursor: zoom-in; transition: border-color 0.3s, box-shadow 0.3s; }
+.entry-figure:hover { border-color: #c4c4c4; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); }
+.entry-figure:focus-visible { border-radius: 10px; }
+.entry-figure img { display: block; width: 100%; height: 150px; object-fit: contain; padding: 0.6rem; }
+.figure-credit { margin-top: 1rem; font-size: 0.8rem; line-height: 1.6; color: var(--secondary); }
+
+/* ---------- CV ------------------------------------------------------------ */
+
+.doc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 4rem; }
+.doc-card { display: flex; flex-direction: column; min-height: 280px; padding: 3rem; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; transition: all 0.3s; }
+.doc-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12); }
+.content .doc-card h2 { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.6; margin: 0 0 1rem; }
+.doc-card p { color: var(--secondary); font-size: 0.95rem; margin-bottom: auto; flex-grow: 1; }
+.links { text-align: center; color: var(--secondary); font-size: 0.95rem; }
+
+/* ---------- Contact ------------------------------------------------------- */
+
+.contact-section { padding: 4rem; margin-bottom: 3rem; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; }
+.content .contact-section h2 { font-size: 0.875rem; font-weight: 600; line-height: 1.6; color: var(--secondary); text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 2rem; }
+.email-item { margin-bottom: 1.5rem; }
+.email-item:last-child { margin-bottom: 0; }
+.email-item h3 { font-size: 0.875rem; color: var(--secondary); margin-bottom: 0.5rem; font-weight: 500; }
+.email-item p, .email-item a { color: var(--primary); font-size: 1.05rem; font-family: 'Courier New', monospace; overflow-wrap: anywhere; }
+
+/* ---------- Bottom of every page ------------------------------------------ */
+
+.social-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 4rem auto; padding: 0 1rem; }
+.social-links a {
+    width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 50%;
+    color: var(--primary); text-decoration: none; font-size: 14px; font-weight: 600; transition: all 0.3s;
+}
+.social-links a:hover { background: var(--primary); color: #fff; transform: translateY(-2px); border-color: var(--primary); text-decoration: none; }
+.social-links svg { width: 20px; height: 20px; fill: currentColor; }
+
+footer { background: var(--primary); color: rgba(255, 255, 255, 0.5); padding: 3rem 1rem; text-align: center; font-size: 0.875rem; margin-top: 6rem; }
+
+/* ==========================================================================
+   Smaller screens
+   ========================================================================== */
+
+@media (max-width: 900px) {
+    .site-nav .container { padding: 1rem 1.25rem; }
+    .site-nav ul { gap: 1.25rem; }
+}
+
+@media (max-width: 768px) {
+    .hero { padding: 3rem 1.5rem; }
+    .hero h1 { font-size: clamp(1.9rem, 8.2vw, 2.5rem); }
+    .header { padding: 4.5rem 1.5rem 3.5rem; }
+    .header h1 { font-size: 3rem; }
+
+    .content, .page-home .content { padding: 3rem 1.5rem 1rem; }
+    .page-research .content, .page-cv .content, .page-contact .content, .page-404 .content { padding: 3rem 1.5rem 1rem; }
+    .content h2 { font-size: 2rem; margin-top: 3rem; }
+    .content .name-heading { font-size: 2.25rem; margin-bottom: 2rem; }
+    .content .section-title { font-size: 2rem; margin-top: 4rem; }
+
+    /* Timeline: dates stack above the text, with the line and dots on the left */
+    .timeline { margin: 2rem -1.5rem 0; padding: 1rem 1.5rem 1rem 3.5rem; }
+    .timeline::before { left: calc(1.5rem + 6.5px); top: 1.4rem; bottom: 1.4rem; }
+    .timeline-item { grid-template-columns: 1fr; gap: 0.4rem; margin-bottom: 2.25rem; }
+    .timeline-year { text-align: left; padding-right: 0; }
+    .timeline-year::after { right: auto; left: calc(-2rem - 4px); top: 0.7em; }
+
+    /* Publications: a slightly smaller figure box, still beside the text */
+    .entry--figure { grid-template-columns: 180px minmax(0, 1fr); gap: 1.1rem; }
+    .entry-figure img { height: 118px; padding: 0.45rem; }
+
+    .doc-grid { grid-template-columns: 1fr; }
+    .doc-card { min-height: 0; padding: 2rem; }
+    .contact-section { padding: 2rem 1.5rem; }
+
+    .social-links { margin: 3rem auto; }
+    footer { margin-top: 3rem; }
+}
+
+/* Phones: the menu becomes a row of five evenly sized tabs under the name. */
+@media (max-width: 640px) {
+    .site-nav .container { flex-direction: column; align-items: stretch; gap: 0.1rem; padding: 0.5rem 0.4rem 0.25rem; }
+    .site-nav .logo { text-align: center; font-size: 0.78rem; letter-spacing: 0.05em; line-height: 1.3; }
+    .site-nav ul { gap: 0; }
+    .site-nav li { flex: 1 1 0; min-width: 0; }
+    .site-nav ul a { display: flex; flex-direction: column; justify-content: center; gap: 0.1rem; min-height: 44px; padding: 0.2rem 0.1rem; font-size: 0.72rem; line-height: 1.2; border-radius: 8px; }
+    .nav-emoji { font-size: 1.05rem; line-height: 1.15; }
+    [id] { scroll-margin-top: 5.5rem; }
+
+    .hero-image { margin: 2rem 1.5rem; }
+    .hero .hero-actions .btn { padding: 0.8rem 1.4rem; }
+}
+
+/* Narrow phones: the figure box moves above the text. */
+@media (max-width: 520px) {
+    .entry--figure { grid-template-columns: 1fr; gap: 0.9rem; }
+    .entry-figure img { height: 170px; padding: 0.7rem; }
+}
+
+@media (max-width: 420px) {
+    .social-links { gap: 0.6rem; }
+    .social-links a { width: 46px; height: 46px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; }
+}

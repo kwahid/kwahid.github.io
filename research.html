@@ -3,125 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research | Kareem A. Wahid</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --bg: #ffffff; --surface: #f5f5f5; --primary: #1a1a1a; --secondary: #4a4a4a; --accent: #0073e6; --border: #e0e0e0; --light-teal: #e8f5f5; }
-        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--primary); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        nav { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(30px); border-bottom: 1px solid var(--border); z-index: 1000; }
-        nav .container { max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-        nav .logo { font-weight: 600; font-size: 0.9rem; color: var(--primary); text-decoration: none; }
-        nav ul { display: flex; gap: 2.5rem; list-style: none; }
-        nav a { color: var(--secondary); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.3s; }
-        nav a:hover { color: var(--primary); }
-        .header { margin-top: 80px; padding: 8rem 0 6rem; background: var(--light-teal); text-align: center; }
-        .header h1 { font-size: 4rem; font-weight: 700; letter-spacing: -0.05em; margin-bottom: 0; }
-        .content { max-width: 1000px; margin: 0 auto; padding: 8rem 2rem; background: var(--bg); }
-        .intro { font-size: 1rem; line-height: 1.8; color: var(--secondary); margin-bottom: 4rem; }
-        .intro p { margin-bottom: 2rem; }
-        .section-title { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.04em; margin: 6rem 0 1.5rem; }
-        .subtitle { font-size: 0.95rem; color: var(--secondary); margin-bottom: 5rem; }
-        .publication { margin-bottom: 1.5rem; padding: 2.5rem; background: var(--bg); border-radius: 12px; }
-        .publication img { width: 100%; height: 400px; object-fit: contain; border-radius: 12px; margin-bottom: 1.5rem; background: white; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-        .publication h3 { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 1rem; }
-        .publication .meta { color: var(--secondary); font-size: 0.9rem; }
-        .social-links { display: flex; gap: 1rem; justify-content: center; margin: 4rem auto; flex-wrap: wrap; max-width: 400px; }
-        .social-links a { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: var(--surface); border: 1px solid var(--border); border-radius: 50%; color: var(--primary); text-decoration: none; transition: all 0.3s; }
-        .social-links a:hover { background: var(--primary); color: white; transform: translateY(-2px); border-color: var(--primary); }
-        .social-links svg { width: 20px; height: 20px; fill: currentColor; }
-        footer { background: var(--primary); color: rgba(255, 255, 255, 0.5); padding: 4rem 0; text-align: center; font-size: 0.875rem; margin-top: 6rem; }
-        @media (max-width: 768px) {
-            nav .container { padding: 1rem 1rem; }
-            nav .logo { font-size: 0.75rem; }
-            nav ul { gap: 0.8rem; }
-            nav a { font-size: 0.7rem; }
-            .content { padding: 6rem 1.5rem; }
-            .header h1 { font-size: 3rem; }
-            .header { padding: 6rem 0 4rem; }
-            .section-title { font-size: 2rem; }
-        }
-    </style>
+    <title>Research | Kareem A. Wahid, MD, PhD</title>
+    <meta name="description" content="Research by Kareem A. Wahid, MD, PhD on AI for medical imaging in radiation oncology: auto-segmentation, uncertainty quantification, and outcome prediction.">
+    <meta name="author" content="Kareem A. Wahid">
+    <link rel="canonical" href="https://kareemwahid.com/research.html">
+
+    <!-- Preview card shown when this page is shared (LinkedIn, X, Slack, iMessage...) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kareem A. Wahid">
+    <meta property="og:title" content="Research | Kareem A. Wahid, MD, PhD">
+    <meta property="og:description" content="Research by Kareem A. Wahid, MD, PhD on AI for medical imaging in radiation oncology: auto-segmentation, uncertainty quantification, and outcome prediction.">
+    <meta property="og:url" content="https://kareemwahid.com/research.html">
+    <meta property="og:image" content="https://kareemwahid.com/kareem-wahid-headshot-2026.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1500">
+    <meta property="og:image:alt" content="Portrait of Kareem A. Wahid">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav>
+<body class="page-research">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <nav class="site-nav" aria-label="Main">
         <div class="container">
             <a href="index.html" class="logo">KAREEM WAHID</a>
             <ul>
-                <li><a href="index.html">🏠 Home</a></li>
-                <li><a href="about.html">👤 About</a></li>
-                <li><a href="research.html">🔬 Research</a></li>
-                <li><a href="cv.html">📄 CV</a></li>
-                <li><a href="contact.html">✉️ Contact</a></li>
+                <li><a href="index.html"><span class="nav-emoji" aria-hidden="true">🏠</span>Home</a></li>
+                <li><a href="about.html"><span class="nav-emoji" aria-hidden="true">👤</span>About</a></li>
+                <li><a href="research.html" aria-current="page"><span class="nav-emoji" aria-hidden="true">🔬</span>Research</a></li>
+                <li><a href="cv.html"><span class="nav-emoji" aria-hidden="true">📄</span>CV</a></li>
+                <li><a href="contact.html"><span class="nav-emoji" aria-hidden="true">✉️</span>Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="header">
+    <header class="header">
         <h1>Research</h1>
         <p>AI in medical imaging and radiation oncology</p>
-    </div>
+    </header>
 
-    <div class="content">
+    <main id="main" class="content">
+        <nav class="jump-links" aria-label="On this page">
+            <a href="#publications">Key publications</a>
+            <a href="#talks">Talks &amp; media</a>
+        </nav>
+
         <div class="intro">
-            <p>Over my time as a trainee, I have focused on developing a robust skill set to bridge <strong>artificial intelligence (AI)</strong> and <strong>medical imaging</strong>. My graduate studies focused on AI in the <strong>radiation oncology</strong> domain, where I developed predictive analytic tools for head and neck cancer diagnosis and treatment under the guidance of <a href="https://www.mdanderson.org/research/departments-labs-institutes/labs/fuller-laboratory.html" target="_blank">Dr. Clifton Fuller</a>. Serially funded through an <a href="https://gsbs.uth.edu/ccts-tl1/" target="_blank">NCATS TL1 Fellowship (TL1TR003169)</a> and subsequently through an <a href="https://reporter.nih.gov/search/Iv6gViXF-UuEzBxpvxa-LA/project-details/10489312" target="_blank">NIH F31 Fellowship (F31DE031502-01)</a>, I have contributed to a variety of projects related to imaging in head and neck cancer radiotherapy. Broadly, I performed research on image processing, automated region-of-interest <strong>segmentation</strong>, and clinical <strong>outcome prediction</strong>. A few key projects I'm particularly proud of are highlighted below, but you can find a full up to date list of my publications on <a href="https://scholar.google.com/citations?user=whrnQUUAAAAJ&hl=en" target="_blank">Google Scholar</a>. You can also check out my full PhD dissertation (and defense recording) on <a href="https://figshare.com/articles/thesis/Kareem_Wahid_PhD_Dissertation_Multiparametric_Magnetic_Resonance_Imaging_Artificial_Intelligence_Pipeline_for_Oropharyngeal_Cancer_Radiotherapy_Treatment_Guidance/22141871" target="_blank">Figshare</a>.</p>
+            <p>Over my time as a trainee, I have focused on developing a robust skill set to bridge <strong>artificial intelligence (AI)</strong> and <strong>medical imaging</strong>. My graduate studies focused on AI in the <strong>radiation oncology</strong> domain, where I developed predictive analytic tools for head and neck cancer diagnosis and treatment under the guidance of <a href="https://www.mdanderson.org/research/departments-labs-institutes/labs/fuller-laboratory.html" target="_blank" rel="noopener">Dr. Clifton Fuller</a>. Serially funded through an <a href="https://www.uth.edu/ccts/education-training/tl1-program" target="_blank" rel="noopener">NCATS TL1 Fellowship (TL1TR003169)</a> and subsequently through an <a href="https://reporter.nih.gov/project-details/10489312" target="_blank" rel="noopener">NIH F31 Fellowship (F31DE031502-01)</a>, I have contributed to a variety of projects related to imaging in head and neck cancer radiotherapy. Broadly, I performed research on image processing, automated region-of-interest <strong>segmentation</strong>, and clinical <strong>outcome prediction</strong>.</p>
 
-            <p>I plan to pursue a career as a clinician-scientist with a research emphasis on applying AI to personalized/precision oncology. In the near term, I aim to pursue a residency position in radiation oncology with the goal of performing clinical trials based on AI-centric clinical decision support tools as a path towards mentored and eventual independent investigator status. While my PhD training has granted me technical informatics domain knowledge and mentorship, I believe a crucial yet often under-valued aspect of clinical translation of these technologies is the underlying ethical considerations for physician and patient end-users. Therefore, I pursued a post-doctoral opportunity through the NIH <a href="https://www.mdanderson.org/education-training/clinical-research-training/postdoctoral-training/postdoctoral-fellowships/igct-t32-training-program.html" target="_blank">Image Guided Cancer Therapy T32 program</a> to explore these topics with sufficient rigor so that I may successfully lead the ethical and equitable translation of image-guided AI technologies to the clinic.</p>
+            <p>A few key projects I'm particularly proud of are highlighted below, but you can find a full up to date list of my publications on <a href="https://scholar.google.com/citations?user=whrnQUUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>. You can also check out my full PhD dissertation (and defense recording) on <a href="https://doi.org/10.6084/m9.figshare.22141871" target="_blank" rel="noopener">Figshare</a>.</p>
+
+            <p>I plan to pursue a career as a clinician-scientist with a research emphasis on applying AI to personalized/precision oncology. I am now a resident in the joint UTHealth Houston/MD Anderson Cancer Center program (a preliminary year in internal medicine, followed by radiation oncology), with the goal of performing clinical trials based on AI-centric clinical decision support tools as a path towards mentored and eventual independent investigator status. While my PhD training has granted me technical informatics domain knowledge and mentorship, I believe a crucial yet often under-valued aspect of clinical translation of these technologies is the underlying ethical considerations for physician and patient end-users. Therefore, I pursued a post-doctoral opportunity through the NIH <a href="https://www.mdanderson.org/education-training/research-training/postdoctoral-training/postdoctoral-fellowships/igct-t32-training-program.html" target="_blank" rel="noopener">Image Guided Cancer Therapy T32 program</a> to explore these topics with sufficient rigor so that I may successfully lead the ethical and equitable translation of image-guided AI technologies to the clinic.</p>
         </div>
 
-        <h2 class="section-title">Key Publications</h2>
-        <p class="subtitle">The following are brief highlights of some of research papers that I'm particularly proud of. Please feel free to check out the linked publications for more info. I make a conscious effort to publicly release my work (open-access).</p>
+        <h2 class="section-title" id="publications">Key Publications</h2>
+        <p class="subtitle">The following are brief highlights of some of the research papers that I'm particularly proud of. Please feel free to check out the linked publications for more info. I make a conscious effort to publicly release my work (open-access).</p>
 
-        <div class="publication">
-            <h3>MRI Intensity Standardization</h3>
-            <img src="pub1-mri-intensity.png" alt="MRI Intensity Standardization">
-            <p class="meta">Published in: <a href="https://www.sciencedirect.com/science/article/pii/S2405631621000658" target="_blank">Physics and Imaging in Radiation Oncology</a>.</p>
-        </div>
+        <ul class="entry-list">
+            <li class="entry entry--figure">
+                <a class="entry-figure" href="pub5-hnts-mrg-challenge.webp" target="_blank" rel="noopener" title="Open the full-size figure">
+                    <img src="pub5-hnts-mrg-challenge-thumb.webp" alt="Overview of the HNTS-MRG 2024 challenge: launch on grand-challenge.org in April 2024, public release of training data for 150 cases in June with pre- and mid-radiotherapy segmentation tasks, test-phase evaluation on 50 cases in August, and awards in October." width="720" height="542" loading="lazy" decoding="async">
+                </a>
+                <div class="entry-body">
+                    <p class="entry-tag">Data challenge</p>
+                    <h3 class="entry-title"><a href="https://doi.org/10.1007/978-3-031-83274-1_1" target="_blank" rel="noopener">Overview of the Head and Neck Tumor Segmentation for Magnetic Resonance Guided Applications (HNTS-MRG) 2024 Challenge</a></h3>
+                    <p class="entry-meta">Wahid KA, Dede C, El-Habashy DM, Kamel S, Rooney MK, Khamis Y, &hellip; Fuller CD. <em>Head and Neck Tumor Segmentation for MR-Guided Applications</em>, Lecture Notes in Computer Science. 2025:1&ndash;35.</p>
+                </div>
+            </li>
+            <li class="entry entry--figure">
+                <a class="entry-figure" href="pub6-uq-scoping-review.webp" target="_blank" rel="noopener" title="Open the full-size figure">
+                    <img src="pub6-uq-scoping-review-thumb.webp" alt="Tree map of how uncertainty quantification was applied in the reviewed studies: failure detection 59.7%, calibration 19.4%, active learning 18.1%, and ambiguity modeling and out-of-distribution detection 1.4% each. The full figure adds tree maps of the methods and metrics used." width="400" height="331" loading="lazy" decoding="async">
+                </a>
+                <div class="entry-body">
+                    <p class="entry-tag">Uncertainty quantification</p>
+                    <h3 class="entry-title"><a href="https://doi.org/10.1016/j.radonc.2024.110542" target="_blank" rel="noopener">Artificial intelligence uncertainty quantification in radiotherapy applications &ndash; A scoping review</a></h3>
+                    <p class="entry-meta">Wahid KA, Kaffey ZY, Farris DP, Humbert-Vidan L, Moreno AC, Rasmussen M, &hellip; Fuentes D, Dohopolski MJ. <em>Radiotherapy and Oncology</em>. 2024;201:110542.</p>
+                </div>
+            </li>
+            <li class="entry entry--figure">
+                <a class="entry-figure" href="pub7-auto-contouring.webp" target="_blank" rel="noopener" title="Open the full-size figure">
+                    <img src="pub7-auto-contouring-thumb.webp" alt="Plot of primary tumor auto-contouring performance in the HECKTOR challenge by year, 2020 to 2022: the best teams' Dice score rises only from about 0.75 to 0.79, above an interobserver variability benchmark of 0.69." width="720" height="443" loading="lazy" decoding="async">
+                </a>
+                <div class="entry-body">
+                    <p class="entry-tag">Auto-contouring</p>
+                    <h3 class="entry-title"><a href="https://doi.org/10.1016/j.adro.2024.101521" target="_blank" rel="noopener">Evolving Horizons in Radiation Therapy Auto-Contouring: Distilling Insights, Embracing Data-Centric Frameworks, and Moving Beyond Geometric Quantification</a></h3>
+                    <p class="entry-meta">Wahid KA, Cardenas CE, Marquez B, Netherton TJ, Kann BH, Court LE, He R, Naser MA, Moreno AC, Fuller CD, Fuentes D. <em>Advances in Radiation Oncology</em>. 2024;9(7):101521.</p>
+                </div>
+            </li>
+            <li class="entry entry--figure">
+                <a class="entry-figure" href="pub8-uncertainty-qa.webp" target="_blank" rel="noopener" title="Open the full-size figure">
+                    <img src="pub8-uncertainty-qa-thumb.webp" alt="Diagram comparing conventional deep learning, which outputs a single point estimate, with Monte Carlo dropout and deep ensembles, which output a posterior predictive distribution." width="720" height="713" loading="lazy" decoding="async">
+                </a>
+                <div class="entry-body">
+                    <p class="entry-tag">Uncertainty quantification</p>
+                    <h3 class="entry-title"><a href="https://doi.org/10.1016/j.phro.2023.100526" target="_blank" rel="noopener">Harnessing uncertainty in radiotherapy auto-segmentation quality assurance</a></h3>
+                    <p class="entry-meta">Wahid KA, Sahlsten J, Jaskari J, Dohopolski MJ, Kaski K, He R, &hellip; Fuentes D. <em>Physics and Imaging in Radiation Oncology</em>. 2024;29:100526.</p>
+                </div>
+            </li>
+            <li class="entry entry--figure">
+                <a class="entry-figure" href="pub9-observer-demographics.webp" target="_blank" rel="noopener" title="Open the full-size figure">
+                    <img src="pub9-observer-demographics-thumb.webp" alt="Diagram: each observer's segmentation is compared with an expert consensus reference using the Dice similarity coefficient, then scored 1 or 0 depending on whether it meets an expert-derived interobserver variability cutoff." width="720" height="450" loading="lazy" decoding="async">
+                </a>
+                <div class="entry-body">
+                    <p class="entry-tag">Crowdsourced segmentation</p>
+                    <h3 class="entry-title"><a href="https://doi.org/10.1200/CCI.23.00174" target="_blank" rel="noopener">Associations Between Radiation Oncologist Demographic Factors and Segmentation Similarity Benchmarks: Insights From a Crowd-Sourced Challenge Using Bayesian Estimation</a></h3>
+                    <p class="entry-meta">Wahid KA, Sahin O, Kundu S, Lin D, Alanis A, Tehami S, &hellip; Gillespie EF, Fuller CD. <em>JCO Clinical Cancer Informatics</em>. 2024;8:e2300174.</p>
+                </div>
+            </li>
+            <li class="entry entry--figure">
+                <a class="entry-figure" href="pub10-funding-primer.webp" target="_blank" rel="noopener" title="Open the full-size figure">
+                    <img src="pub10-funding-primer-thumb.webp" alt="Diagram of three principles linking an early investigator to academic success through grant review: the Matthew effect (early wins lead to later wins), persistence after early failure, and stochasticity (more applications mean more chances)." width="720" height="390" loading="lazy" decoding="async">
+                </a>
+                <div class="entry-body">
+                    <p class="entry-tag">Career development</p>
+                    <h3 class="entry-title"><a href="https://doi.org/10.1016/j.ijrobp.2023.09.030" target="_blank" rel="noopener">Empirically Derived Principles for Research Funding Success: A Primer for Early Career Academic Investigators</a></h3>
+                    <p class="entry-meta">Wahid KA, Rooney MK, Gunther JR, Moreno AC, Pinnix CC, Thomas CR Jr, Fuller CD. <em>International Journal of Radiation Oncology, Biology, Physics</em>. 2024;118(3):590&ndash;594.</p>
+                </div>
+            </li>
+            <li class="entry entry--figure">
+                <a class="entry-figure" href="pub4-crowdsourced.webp" target="_blank" rel="noopener" title="Open the full-size figure">
+                    <img src="pub4-crowdsourced-thumb.webp" alt="Schematic: cases from head and neck, sarcoma, breast, gynecologic and gastrointestinal cancers are contoured by non-experts and experts; STAPLE consensus contours from each group are compared using overlap and distance measures." width="720" height="279" loading="lazy" decoding="async">
+                </a>
+                <div class="entry-body">
+                    <p class="entry-tag">Crowdsourced segmentation</p>
+                    <h3 class="entry-title"><a href="https://doi.org/10.1117/1.JMI.10.S1.S11903" target="_blank" rel="noopener">E pluribus unum: prospective acceptability benchmarking from the Contouring Collaborative for Consensus in Radiation Oncology crowdsourced initiative for multiobserver segmentation</a></h3>
+                    <p class="entry-meta">Lin D*, Wahid KA*, Nelms BE, He R, Naser MA, Duke S, &hellip; Fuller CD, Gillespie EF. <em>Journal of Medical Imaging</em>. 2023;10(S1):S11903. <span class="entry-note">*Co-first authors.</span></p>
+                </div>
+            </li>
+            <li class="entry entry--figure">
+                <a class="entry-figure" href="pub3-mri-generation.webp" target="_blank" rel="noopener" title="Open the full-size figure">
+                    <img src="pub3-mri-generation-thumb.webp" alt="Schematic: a deep learning model turns a 2-minute MRI into a synthetic 6-minute MRI, which is evaluated with similarity metrics, segmentation overlap and a clinician Turing test." width="720" height="594" loading="lazy" decoding="async">
+                </a>
+                <div class="entry-body">
+                    <p class="entry-tag">Low-quality to high-quality MRI generation</p>
+                    <h3 class="entry-title"><a href="https://doi.org/10.3389/fonc.2022.975902" target="_blank" rel="noopener">Deep-learning-based generation of synthetic 6-minute MRI from 2-minute MRI for use in head and neck cancer radiotherapy</a></h3>
+                    <p class="entry-meta">Wahid KA, Xu J, El-Habashy D, Khamis Y, Abobakr M, McDonald B, &hellip; Fuller CD, Naser MA. <em>Frontiers in Oncology</em>. 2022;12:975902.</p>
+                </div>
+            </li>
+            <li class="entry entry--figure">
+                <a class="entry-figure" href="pub2-tumor-segmentation.webp" target="_blank" rel="noopener" title="Open the full-size figure">
+                    <img src="pub2-tumor-segmentation-thumb.webp" alt="Four-panel figure: (A) anatomical T2 and T1 MRI with functional ADC, Ktrans and Ve maps; (B) cropping, resampling and rescaling of the images; (C) the deep learning network architecture; (D) the input channel combinations tested with leave-one-out cross-validation." width="720" height="335" loading="lazy" decoding="async">
+                </a>
+                <div class="entry-body">
+                    <p class="entry-tag">Multiparametric MRI automated tumor segmentation</p>
+                    <h3 class="entry-title"><a href="https://doi.org/10.1016/j.ctro.2021.10.003" target="_blank" rel="noopener">Evaluation of deep learning-based multiparametric MRI oropharyngeal primary tumor auto-segmentation and investigation of input channel effects: Results from a prospective imaging registry</a></h3>
+                    <p class="entry-meta">Wahid KA, Ahmed S, He R, van Dijk LV, Teuwen J, McDonald BA, &hellip; Fuller CD, Naser MA. <em>Clinical and Translational Radiation Oncology</em>. 2022;32:6&ndash;14.</p>
+                </div>
+            </li>
+            <li class="entry entry--figure">
+                <a class="entry-figure" href="pub1-mri-intensity.webp" target="_blank" rel="noopener" title="Open the full-size figure">
+                    <img src="pub1-mri-intensity-thumb.webp" alt="Workflow diagram: MRI from a heterogeneous and a homogeneous patient cohort are processed with several intensity standardization methods, then compared using SD NMIc calculations in fat, muscle and bone." width="720" height="273" loading="lazy" decoding="async">
+                </a>
+                <div class="entry-body">
+                    <p class="entry-tag">MRI intensity standardization</p>
+                    <h3 class="entry-title"><a href="https://doi.org/10.1016/j.phro.2021.11.001" target="_blank" rel="noopener">Intensity standardization methods in magnetic resonance imaging of head and neck cancer</a></h3>
+                    <p class="entry-meta">Wahid KA, He R, McDonald BA, Anderson BM, Salzillo T, Mulder S, &hellip; Fuller CD, van Dijk LV. <em>Physics and Imaging in Radiation Oncology</em>. 2021;20:88&ndash;93.</p>
+                </div>
+            </li>
+        </ul>
+        <p class="figure-credit">Figures for the 2024&ndash;2025 open-access papers are from the published articles (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>, resized or cropped), retrieved from <a href="https://pmc.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed Central</a>, NIH National Library of Medicine.</p>
 
-        <div class="publication">
-            <h3>Multiparametric MRI Automated Tumor Segmentation</h3>
-            <img src="pub2-tumor-segmentation.png" alt="Multiparametric MRI Automated Tumor Segmentation">
-            <p class="meta">Published in: <a href="https://www.sciencedirect.com/science/article/pii/S2405630821000884" target="_blank">Clinical and Translational Radiation Oncology</a>.</p>
-        </div>
+        <h2 class="section-title" id="talks">Talks &amp; Media</h2>
+        <p class="subtitle">A few invited talks and other places I've shared my work. A more complete list is in my <a href="cv.html">CV</a>.</p>
 
-        <div class="publication">
-            <h3>Low-Quality to High-Quality MRI Generation</h3>
-            <img src="pub3-mri-generation.png" alt="Low-Quality to High-Quality MRI Generation">
-            <p class="meta">Published in: <a href="https://www.frontiersin.org/articles/10.3389/fonc.2022.975902/full" target="_blank">Frontiers in Oncology</a>.</p>
-        </div>
+        <h3 class="subhead">Selected talks</h3>
+        <ul class="entry-list">
+            <li class="entry">
+                <h4 class="entry-title">Crowdsourcing Tumor Auto-Contouring Solutions for MR-Guided Radiotherapy: The HNTS-MRG 2024 Challenge</h4>
+                <p class="entry-meta">Oral presentation &middot; ASTRO Annual Meeting, San Francisco, CA &middot; 2025 &middot; <a href="https://doi.org/10.1016/j.ijrobp.2025.06.1088" target="_blank" rel="noopener">Abstract</a></p>
+            </li>
+            <li class="entry">
+                <h4 class="entry-title">Data science competitions as a pathway to innovative AI approaches in radiation oncology</h4>
+                <p class="entry-meta">Invited talk &middot; ESTRO, Vienna, Austria &middot; 2025</p>
+            </li>
+            <li class="entry">
+                <h4 class="entry-title">Evolving horizons in radiotherapy auto-contouring: Insights from hosting an international data science competition</h4>
+                <p class="entry-meta">Invited talk &middot; UT Austin AI Medical Imaging (AIMI) Seminar Series, virtual &middot; 2024</p>
+            </li>
+            <li class="entry">
+                <h4 class="entry-title">Are Non-Experts Comparable to Experts?</h4>
+                <p class="entry-meta">Invited talk &middot; GSBS Quantitative Sciences Program Retreat, Houston, TX &middot; 2023</p>
+            </li>
+            <li class="entry">
+                <h4 class="entry-title">Multiparametric MRI Artificial Intelligence Pipeline for Oropharyngeal Cancer Radiotherapy Treatment Guidance</h4>
+                <p class="entry-meta">Invited talk &middot; GSBS Presidents' Research Scholars Symposium &middot; 2022</p>
+            </li>
+            <li class="entry">
+                <h4 class="entry-title">Combining Tumor Segmentation Masks with PET/CT Images and Clinical Data in a Deep Learning Framework for Improved Prognostic Prediction in Head and Neck Squamous Cell Carcinoma</h4>
+                <p class="entry-meta">Invited talk (1st place, data science competition) &middot; MICCAI HECKTOR Challenge, virtual &middot; 2021</p>
+            </li>
+            <li class="entry">
+                <h4 class="entry-title">Artificial Intelligence in Oncology</h4>
+                <p class="entry-meta">Invited talk &middot; Texas Oncology 2nd Annual Cancer Athlon Symposium, South Padre Island, TX &middot; 2019</p>
+            </li>
+        </ul>
 
-        <div class="publication">
-            <h3>Crowdsourced Segmentation</h3>
-            <img src="pub4-crowdsourced.png" alt="Crowdsourced Segmentation">
-            <p class="meta">Published in: <a href="https://www.spiedigitallibrary.org/journals/journal-of-medical-imaging/volume-10/issue-S1/S11903/E-pluribus-unum--prospective-acceptability-benchmarking-from-the-Contouring/10.1117/1.JMI.10.S1.S11903.full?SSO=1" target="_blank">Journal of Medical Imaging</a>.</p>
-        </div>
-    </div>
+        <h3 class="subhead">Media &amp; writing</h3>
+        <ul class="entry-list">
+            <li class="entry">
+                <h4 class="entry-title"><a href="https://rsnaradiologyai.libsyn.com/algorithmic-fairness-in-machine-learning" target="_blank" rel="noopener">Algorithmic Fairness in Machine Learning</a></h4>
+                <p class="entry-meta">Podcast interview &middot; <em>Radiology: Artificial Intelligence</em> podcast, episode 36 &middot; September 2023</p>
+            </li>
+            <li class="entry">
+                <h4 class="entry-title"><a href="https://pubs.rsna.org/page/ai/blog/2023/08/ryai_editorsblog082523" target="_blank" rel="noopener">Algorithmic Fairness in Machine Learning</a></h4>
+                <p class="entry-meta">Blog post &middot; <em>Radiology: Artificial Intelligence</em> &middot; August 2023</p>
+            </li>
+            <li class="entry">
+                <h4 class="entry-title"><a href="https://pubs.rsna.org/page/ai/blog/2023/05/ryai_editorsblog050323" target="_blank" rel="noopener">Update on AI for Oncologic Imaging</a></h4>
+                <p class="entry-meta">Blog post &middot; <em>Radiology: Artificial Intelligence</em> &middot; May 2023</p>
+            </li>
+        </ul>
+    </main>
 
-    <div class="social-links">
-        <a href="https://github.com/kwahid" target="_blank" aria-label="GitHub">
-            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+    <aside class="social-links" aria-label="Profiles on other sites">
+        <a href="https://github.com/kwahid" target="_blank" rel="me noopener" aria-label="GitHub">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
         </a>
-        <a href="https://orcid.org/0000-0002-0503-0175" target="_blank" aria-label="ORCID">
-            <svg viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.444h2.297c2.359 0 4.053-1.666 4.053-3.722 0-2.056-1.694-3.722-4.053-3.722h-2.297z"/></svg>
+        <a href="https://orcid.org/0000-0002-0503-0175" target="_blank" rel="me noopener" aria-label="ORCID">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.444h2.297c2.359 0 4.053-1.666 4.053-3.722 0-2.056-1.694-3.722-4.053-3.722h-2.297z"/></svg>
         </a>
-        <a href="https://scholar.google.com/citations?hl=en&user=whrnQUUAAAAJ" target="_blank" aria-label="Google Scholar">
-            <svg viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+        <a href="https://scholar.google.com/citations?hl=en&amp;user=whrnQUUAAAAJ" target="_blank" rel="me noopener" aria-label="Google Scholar">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
         </a>
-        <a href="https://www.linkedin.com/in/kareem-wahid-307241178/" target="_blank" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <a href="https://www.linkedin.com/in/kareem-wahid-307241178/" target="_blank" rel="me noopener" aria-label="LinkedIn">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
-        <a href="https://www.researchgate.net/profile/Kareem-Wahid" target="_blank" aria-label="ResearchGate">
-            <span style="font-weight: 600; font-size: 14px;">RG</span>
+        <a href="https://www.researchgate.net/profile/Kareem-Wahid" target="_blank" rel="me noopener" aria-label="ResearchGate">RG</a>
+        <a href="https://x.com/Kareem_A_Wahid" target="_blank" rel="me noopener" aria-label="X">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         </a>
-        <a href="https://twitter.com/kareem_a_wahid" target="_blank" aria-label="X">
-            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </a>
-    </div>
+    </aside>
 
     <footer>
-        <p>©2026 by Kareem Wahid</p>
+        <p>&copy;<span id="year">2026</span> by Kareem Wahid</p>
     </footer>
+
+    <!-- Keeps the footer year current without editing this file every January -->
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
